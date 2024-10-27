@@ -22,6 +22,10 @@
 		E4295F342CCE31AB00DC64E6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4295F0E2CCE31A800DC64E6 /* GameScene.swift */; };
 		E4295F352CCE31AB00DC64E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4295F0F2CCE31AB00DC64E6 /* Assets.xcassets */; };
 		E4295F362CCE31AB00DC64E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4295F0F2CCE31AB00DC64E6 /* Assets.xcassets */; };
+		E4295F412CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */; };
+		E4295F422CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */; };
+		E4295F442CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */; };
+		E4295F452CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,8 @@
 		E4295F292CCE31AB00DC64E6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E4295F2C2CCE31AB00DC64E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4295F2E2CCE31AB00DC64E6 /* GKE_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GKE_macOS.entitlements; sourceTree = "<group>"; };
+		E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourInARowGameScene.swift; sourceTree = "<group>"; };
+		E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FourInARowGameScene.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 			children = (
 				E4295F3F2CCE32C900DC64E6 /* GameScene */,
 				E4295F0F2CCE31AB00DC64E6 /* Assets.xcassets */,
+				E4295F462CCE33E200DC64E6 /* FourInARow */,
 			);
 			path = "GKE Shared";
 			sourceTree = "<group>";
@@ -117,6 +124,15 @@
 				E4295F0E2CCE31A800DC64E6 /* GameScene.swift */,
 			);
 			path = GameScene;
+			sourceTree = "<group>";
+		};
+		E4295F462CCE33E200DC64E6 /* FourInARow */ = {
+			isa = PBXGroup;
+			children = (
+				E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */,
+				E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */,
+			);
+			path = FourInARow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +218,7 @@
 				E4295F1D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
 				E4295F2F2CCE31AB00DC64E6 /* Actions.sks in Resources */,
 				E4295F202CCE31AB00DC64E6 /* LaunchScreen.storyboard in Resources */,
+				E4295F442CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
 				E4295F352CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4295F2D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
+				E4295F452CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
 				E4295F322CCE31AB00DC64E6 /* GameScene.sks in Resources */,
 				E4295F362CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
 				E4295F302CCE31AB00DC64E6 /* Actions.sks in Resources */,
@@ -224,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4295F412CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
 				E4295F332CCE31AB00DC64E6 /* GameScene.swift in Sources */,
 				E4295F1A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
 				E4295F182CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
@@ -234,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4295F422CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
 				E4295F342CCE31AB00DC64E6 /* GameScene.swift in Sources */,
 				E4295F2A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
 				E4295F282CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
