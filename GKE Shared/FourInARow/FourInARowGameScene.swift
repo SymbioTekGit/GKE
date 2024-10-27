@@ -16,7 +16,9 @@ class FourInARowGameScene: SKScene {
     var time: TimeInterval = 0
     var timer: TimeInterval = 1
     
-    var isGameOver: Bool = false
+    var col: Int = 0
+    var row: Int = 0
+    var chipNode = SKSpriteNode()
     
     class func newGameScene() -> FourInARowGameScene {
         // Load 'FourInARowGameScene.sks' as an SKScene.
@@ -38,7 +40,7 @@ class FourInARowGameScene: SKScene {
     
     func resetModel() {
         FourInARowPlayer.players = [
-            FourInARowPlayer(playerId: 1, chip: .red, isCPU: true),
+            FourInARowPlayer(playerId: 1, chip: .red, isCPU: false),
             FourInARowPlayer(playerId: 2, chip: .yellow, isCPU: true) ]
         
         model = FourInARowModel()
@@ -46,14 +48,12 @@ class FourInARowGameScene: SKScene {
         model.players = FourInARowPlayer.players
         model.activePlayer = FourInARowPlayer.players[0]
         
-        print(model)
+//        print(model)
         
         strategist = GKMinmaxStrategist()
-        strategist.maxLookAheadDepth = 2
+        strategist.maxLookAheadDepth = 5
         strategist.randomSource = GKARC4RandomSource()
         strategist.gameModel = model
-        
-        isGameOver = false
     }
     
     func resetUI() {
@@ -61,68 +61,92 @@ class FourInARowGameScene: SKScene {
         
         for row in 0...model.rows-1 {
             for col in 0...model.cols-1 {
-                addChipNode(move: FourInARowMove(col: col, row: row, chip: .none))
+                let node = chipNode(col: col, row: row, chip: .none)
+                node.zPosition = 0
+                addChild(node)
             }
-        }
-    }
-    
-//    override func update(_ currentTime: TimeInterval) {
-//        deltaTime = currentTime - previousTime
-//        
-//        time += deltaTime
-//        if time > timer {
-            
-//            time = 0
-//        }
-//        previousTime = currentTime
-//    }
-
-    func update() {
-        if isGameOver == true {
-            return
         }
         
-        if (model.activePlayer as! FourInARowPlayer).isCPU {
-            let move = strategist.bestMove(for: model.activePlayer!) as! FourInARowMove
-            print("BEST MOVE: \(move.col) \(move.row) \(move.chip)")
-            
-            model.set(move: move)
-            addChipNode(move: move)
-            print(model)
-            
-            if model.isWin(for: model.activePlayer!) {
-                addLabelNode(text: "Player \((model.activePlayer as! FourInARowPlayer).chip) Wins !!!")
-                isGameOver = true
-                return
-            } else if model.gameModelUpdates(for: model.activePlayer!) == nil {
-                addLabelNode(text: "Draw Game !!!")
-                isGameOver = true
-                return
-            }
-                
-            model.activePlayer = (model.activePlayer as! FourInARowPlayer).nextPlayer
-        }
+        col = 0
+        row = model.rows
+        chipNode = chipNode(col: col, row: row, chip: (model.activePlayer as! FourInARowPlayer).chip)
+        chipNode.isHidden = false
+        addChild(chipNode)
     }
-                            
-    func addChipNode(move: FourInARowMove) {
-        let node = SKSpriteNode(imageNamed: "fourinarow-\(move.chip)-chip")
-        node.name = "\(move.chip)"
+    
+    override func update(_ currentTime: TimeInterval) {
+        deltaTime = currentTime - previousTime
+        
+        time += deltaTime
+        if time > timer {
+            if chipNode.isHidden == false {
+                if (model.activePlayer as! FourInARowPlayer).isCPU {
+                    let move = strategist.bestMove(for: model.activePlayer!) as! FourInARowMove
+//                    print("BEST MOVE: \(move.col) \(move.row) \(move.chip)")
+                    
+                    chipNodeUpdate(col: move.col, row: model.rows, chip: move.chip)
+                    
+                    model.set(move: move)
+                    let node = chipNode(col: move.col, row: move.row, chip: move.chip)
+                    addChild(node)
+                    
+                    update()
+                }
+            }
+            time = 0
+        }
+        previousTime = currentTime
+    }
+
+    func update() {
+        if model.isWin(for: model.activePlayer!) {
+            addLabelNode(text: "Player \((model.activePlayer as! FourInARowPlayer).chip) Wins !!!")
+            chipNode.isHidden = true
+            return
+        } else if model.gameModelUpdates(for: model.activePlayer!) == nil {
+            addLabelNode(text: "Draw Game !!!")
+            chipNode.isHidden = true
+            return
+        }
+            
+        changePlayerTurn()
+    }
+    
+    func changePlayerTurn() {
+        let nextPlayer = (model.activePlayer as! FourInARowPlayer).nextPlayer
+        model.activePlayer = nextPlayer
+        
+        chipNodeUpdate(col: col, row: model.rows, chip: nextPlayer.chip)
+    }
+    
+    func chipNodeUpdate(col: Int, row: Int, chip: FourInARowChip) {
+        self.col = col
+        self.row = row
+        let chip = (model.activePlayer as! FourInARowPlayer).chip
+        chipNode.texture = SKTexture(imageNamed: "fourinarow-\(chip)-chip")
+        chipNode.position = CGPoint(x: col * 64, y: row * 64)
+    }
+    
+    func chipNode(col: Int, row: Int, chip: FourInARowChip) -> SKSpriteNode {
+        let node = SKSpriteNode(imageNamed: "fourinarow-\(chip)-chip")
+        node.name = "\(chip)"
         node.anchorPoint = .zero
-        node.position = CGPoint(x: move.col * 64, y: move.row * 64)
-        node.zPosition = (move.chip == .none ? 0 : -10)
-        addChild(node)
+        node.position = CGPoint(x: col * 64, y: row * 64)
+        node.zPosition = -10
+        return node
     }
     
     func addLabelNode(text: String) {
         let label = SKLabelNode(text: text)
         label.name = "GameLabel"
+        label.fontName = "Chalkduster"
         label.fontSize = 32
         label.verticalAlignmentMode = .center
         label.position = CGPoint(x: frame.width / 2, y: frame.height / 2)
         label.zPosition = 10
         addChild(label)
         
-        print(text)
+//        print(text)
     }
 }
 
@@ -155,15 +179,39 @@ extension FourInARowGameScene {
 extension FourInARowGameScene {
 
     override func mouseDown(with event: NSEvent) {
-        update()
+        
     }
     
     override func mouseDragged(with event: NSEvent) {
+        if (model.activePlayer as! FourInARowPlayer).isCPU {
+            return
+        }
         
+        let position = event.location(in: self)
+        var col = Int(position.x / 64)
+        if col < 0 {
+            col = 0
+        }
+        if col >= model.cols {
+            col = model.cols - 1
+        }
+        
+        let chip = (model.activePlayer as! FourInARowPlayer).chip
+        chipNodeUpdate(col: col, row: model.rows, chip: chip)
     }
     
     override func mouseUp(with event: NSEvent) {
+        if (model.activePlayer as! FourInARowPlayer).isCPU {
+            return
+        }
+        if let row = model.lowest(col) {
+            let chip = (model.activePlayer as! FourInARowPlayer).chip
+            model.set(move: FourInARowMove(col: col, row: row, chip: chip))
+            let node = chipNode(col: col, row: row, chip: chip)
+            addChild(node)
+        }
         
+        update()
     }
 
 }
@@ -305,7 +353,7 @@ class FourInARowModel: NSObject, GKGameModel {
             }
         }
         
-        print(moves)
+//        print(moves)
         
         if moves == [] {
             return nil
