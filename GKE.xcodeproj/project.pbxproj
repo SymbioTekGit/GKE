@@ -72,9 +72,7 @@
 		E4295F0B2CCE31A800DC64E6 /* GKE Shared */ = {
 			isa = PBXGroup;
 			children = (
-				E4295F0C2CCE31A800DC64E6 /* Actions.sks */,
-				E4295F0D2CCE31A800DC64E6 /* GameScene.sks */,
-				E4295F0E2CCE31A800DC64E6 /* GameScene.swift */,
+				E4295F3F2CCE32C900DC64E6 /* GameScene */,
 				E4295F0F2CCE31AB00DC64E6 /* Assets.xcassets */,
 			);
 			path = "GKE Shared";
@@ -109,6 +107,16 @@
 				E4295F2E2CCE31AB00DC64E6 /* GKE_macOS.entitlements */,
 			);
 			path = "GKE macOS";
+			sourceTree = "<group>";
+		};
+		E4295F3F2CCE32C900DC64E6 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				E4295F0C2CCE31A800DC64E6 /* Actions.sks */,
+				E4295F0D2CCE31A800DC64E6 /* GameScene.sks */,
+				E4295F0E2CCE31A800DC64E6 /* GameScene.swift */,
+			);
+			path = GameScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
