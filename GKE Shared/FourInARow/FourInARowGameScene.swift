@@ -8,14 +8,13 @@
 import GameplayKit
 
 class FourInARowGameScene: SKScene {
-    var players = [FourInARowPlayer]()
-    var models = [FourInARowModel]()
+    var model = FourInARowModel()
     var strategist: GKMinmaxStrategist!
 
-//    var deltaTime: TimeInterval = 0
-//    var previousTime: TimeInterval = 0
-//    var time: TimeInterval = 0
-//    var timer: TimeInterval = 1
+    var deltaTime: TimeInterval = 0
+    var previousTime: TimeInterval = 0
+    var time: TimeInterval = 0
+    var timer: TimeInterval = 1
     
     var isGameOver: Bool = false
     
@@ -38,19 +37,21 @@ class FourInARowGameScene: SKScene {
     }
     
     func resetModel() {
-        players = [ FourInARowPlayer(playerId: 1, chip: .red, isCPU: true),
-                    FourInARowPlayer(playerId: 2, chip: .yellow, isCPU: true) ]
-        models = [FourInARowModel()]
+        FourInARowPlayer.players = [
+            FourInARowPlayer(playerId: 1, chip: .red, isCPU: true),
+            FourInARowPlayer(playerId: 2, chip: .yellow, isCPU: true) ]
         
-        models[0].players = players
-        models[0].activePlayer = players[0]
+        model = FourInARowModel()
         
-        print(models[0])
+        model.players = FourInARowPlayer.players
+        model.activePlayer = FourInARowPlayer.players[0]
+        
+        print(model)
         
         strategist = GKMinmaxStrategist()
-        strategist.maxLookAheadDepth = 1
+        strategist.maxLookAheadDepth = 2
         strategist.randomSource = GKARC4RandomSource()
-        strategist.gameModel = models[0]
+        strategist.gameModel = model
         
         isGameOver = false
     }
@@ -58,48 +59,48 @@ class FourInARowGameScene: SKScene {
     func resetUI() {
         self.removeAllChildren()
         
-        for row in 0...models[0].rows-1 {
-            for col in 0...models[0].cols-1 {
+        for row in 0...model.rows-1 {
+            for col in 0...model.cols-1 {
                 addChipNode(move: FourInARowMove(col: col, row: row, chip: .none))
             }
         }
     }
-    /*
-    override func update(_ currentTime: TimeInterval) {
-        deltaTime = currentTime - previousTime
-        
-        time += deltaTime
-        if time > timer {
-            update()
-            time = 0
-        }
-        previousTime = currentTime
-    }
-    */
+    
+//    override func update(_ currentTime: TimeInterval) {
+//        deltaTime = currentTime - previousTime
+//        
+//        time += deltaTime
+//        if time > timer {
+            
+//            time = 0
+//        }
+//        previousTime = currentTime
+//    }
+
     func update() {
         if isGameOver == true {
             return
         }
         
-        if (models[0].activePlayer as! FourInARowPlayer).isCPU {
-            let move = strategist.bestMove(for: models[0].activePlayer!) as! FourInARowMove
+        if (model.activePlayer as! FourInARowPlayer).isCPU {
+            let move = strategist.bestMove(for: model.activePlayer!) as! FourInARowMove
             print("BEST MOVE: \(move.col) \(move.row) \(move.chip)")
             
-            models[0].set(move: move)
+            model.set(move: move)
             addChipNode(move: move)
-            print(models[0])
+            print(model)
             
-            if models[0].isWin(for: models[0].activePlayer!) {
-                addLabelNode(text: "Player \(players[models[0].activePlayer!.playerId - 1].chip) Wins !!!")
+            if model.isWin(for: model.activePlayer!) {
+                addLabelNode(text: "Player \((model.activePlayer as! FourInARowPlayer).chip) Wins !!!")
                 isGameOver = true
                 return
-            } else if models[0].gameModelUpdates(for: models[0].activePlayer!) == nil {
+            } else if model.gameModelUpdates(for: model.activePlayer!) == nil {
                 addLabelNode(text: "Draw Game !!!")
                 isGameOver = true
                 return
             }
-            
-            models[0].activePlayer = models[0].nextPlayer
+                
+            model.activePlayer = (model.activePlayer as! FourInARowPlayer).nextPlayer
         }
     }
                             
@@ -242,6 +243,29 @@ class FourInARowModel: NSObject, GKGameModel {
         return nil
     }
     
+    func neighbours(col: Int, row: Int, chip: FourInARowChip) -> Int {
+        var count = 0
+        for y in 0...2 {
+            for x in 0...2 {
+                let dx = x - 1
+                let dy = y - 1
+                if (col + dx < 0) || (col + dx >= cols) || (row + dy < 0) || (row + dy >= rows) {
+                    continue
+                }
+                let neighbour = datas[coord2index(col: col + dx, row: row + dy)]
+                if neighbour == .none {
+                    continue
+                }
+                if neighbour == chip {
+                    count += 10
+                } else {
+                    count += 1
+                }
+            }
+        }
+        return count
+    }
+    
     func testFourInARow(col: Int, row: Int, dx: Int, dy: Int, chip: FourInARowChip) -> Bool {
         if (col + dx * 3 >= cols) || (col + dx * 3 < 0) || (row + dy * 3 >= rows) || (row + dy * 3 < 0) {
             return false
@@ -276,9 +300,12 @@ class FourInARowModel: NSObject, GKGameModel {
         var moves = [FourInARowMove]()
         for col in 0...cols-1 {
             if let row = lowest(col) {
-                moves.append(FourInARowMove(col: col, row: row, chip: chip))
+                let neighbours = neighbours(col: col, row: row, chip: chip)
+                moves.append(FourInARowMove(col: col, row: row, chip: chip, value: neighbours))
             }
         }
+        
+        print(moves)
         
         if moves == [] {
             return nil
@@ -293,14 +320,25 @@ class FourInARowModel: NSObject, GKGameModel {
             activePlayer = nextPlayer
         }
     }
-    
+
     func score(for player: GKGameModelPlayer) -> Int {
+        let chip = (player as! FourInARowPlayer).chip
+        var score = 0
+        
         if isWin(for: activePlayer!) {
-            return 1000
-        } else if isWin(for: nextPlayer){
-            return -1000
+            score += 100000
+        } else if isLoss(for: activePlayer!) {
+            score -= -100000
         }
-        return 0
+        
+        for row in 0...rows-1 {
+            for col in 0...cols-1 {
+                let neighbours = neighbours(col: col, row: row, chip: chip)
+                score += neighbours
+            }
+        }
+        
+        return score
     }
     
     func isWin(for player: GKGameModelPlayer) -> Bool {
@@ -325,12 +363,25 @@ class FourInARowModel: NSObject, GKGameModel {
         
         return false
     }
+    
+    func isLoss(for player: GKGameModelPlayer) -> Bool {
+        return isWin(for: (player as! FourInARowPlayer).nextPlayer)
+    }
 }
 
 class FourInARowPlayer: NSObject, GKGameModelPlayer {
+    static var players = [FourInARowPlayer]()
+    
     var playerId: Int
     var chip: FourInARowChip
     var isCPU: Bool
+    
+    var nextPlayer: FourInARowPlayer {
+        if FourInARowPlayer.players[0].playerId == playerId {
+            return FourInARowPlayer.players[1]
+        }
+        return FourInARowPlayer.players[0]
+    }
     
     init(playerId: Int, chip: FourInARowChip, isCPU: Bool = false) {
         self.playerId = playerId
@@ -347,14 +398,14 @@ class FourInARowMove: NSObject, GKGameModelUpdate {
     var chip: FourInARowChip
     
     override var debugDescription: String {
-        return "MOVE: \(col) \(row) \(chip)"
+        return "MOVE: \(col) \(row) \(chip) \(value)"
     }
     
-    init(col: Int, row: Int, chip: FourInARowChip) {
+    init(col: Int, row: Int, chip: FourInARowChip, value: Int = 0) {
         self.col = col
         self.row = row
         self.chip = chip
-        self.value = 0
+        self.value = value
         super.init()
     }
 }
