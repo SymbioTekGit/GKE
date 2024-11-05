@@ -26,6 +26,28 @@
 		E4295F422CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */; };
 		E4295F442CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */; };
 		E4295F452CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */; };
+		E42A0EBC2CD67A0D000B5A2A /* GKETileSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EBB2CD67A0D000B5A2A /* GKETileSet.swift */; };
+		E42A0EBD2CD67A0D000B5A2A /* GKETileSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EBB2CD67A0D000B5A2A /* GKETileSet.swift */; };
+		E42A0EBF2CD73E03000B5A2A /* GKETileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EBE2CD73E03000B5A2A /* GKETileLayer.swift */; };
+		E42A0EC02CD73E03000B5A2A /* GKETileLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EBE2CD73E03000B5A2A /* GKETileLayer.swift */; };
+		E42A0EC22CD74164000B5A2A /* GKETileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC12CD74164000B5A2A /* GKETileNode.swift */; };
+		E42A0EC32CD74164000B5A2A /* GKETileNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC12CD74164000B5A2A /* GKETileNode.swift */; };
+		E42A0EC62CD74A4F000B5A2A /* GKERandomBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC52CD74A4F000B5A2A /* GKERandomBag.swift */; };
+		E42A0EC72CD74A4F000B5A2A /* GKERandomBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC52CD74A4F000B5A2A /* GKERandomBag.swift */; };
+		E42A0EC92CD78B12000B5A2A /* GKEMetaTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC82CD78B12000B5A2A /* GKEMetaTile.swift */; };
+		E42A0ECA2CD78B12000B5A2A /* GKEMetaTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0EC82CD78B12000B5A2A /* GKEMetaTile.swift */; };
+		E42A0ECD2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0ECC2CD8851B000B5A2A /* TicTacToeGameScene.swift */; };
+		E42A0ECE2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42A0ECC2CD8851B000B5A2A /* TicTacToeGameScene.swift */; };
+		E42A0ED02CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E42A0ECF2CD886BE000B5A2A /* TicTacToeGameScene.sks */; };
+		E42A0ED12CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E42A0ECF2CD886BE000B5A2A /* TicTacToeGameScene.sks */; };
+		E44163372CCFE9D90008529C /* TetrisGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44163362CCFE9D90008529C /* TetrisGameScene.swift */; };
+		E44163382CCFE9D90008529C /* TetrisGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44163362CCFE9D90008529C /* TetrisGameScene.swift */; };
+		E441633A2CCFEA060008529C /* TetrisGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E44163392CCFEA060008529C /* TetrisGameScene.sks */; };
+		E441633B2CCFEA060008529C /* TetrisGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E44163392CCFEA060008529C /* TetrisGameScene.sks */; };
+		E441633E2CCFEB950008529C /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = E441633C2CCFEB950008529C /* LICENCE */; };
+		E441633F2CCFEB950008529C /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = E441633C2CCFEB950008529C /* LICENCE */; };
+		E44163402CCFEB950008529C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E441633D2CCFEB950008529C /* README.md */; };
+		E44163412CCFEB950008529C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E441633D2CCFEB950008529C /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +67,17 @@
 		E4295F2E2CCE31AB00DC64E6 /* GKE_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GKE_macOS.entitlements; sourceTree = "<group>"; };
 		E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourInARowGameScene.swift; sourceTree = "<group>"; };
 		E4295F432CCE33D900DC64E6 /* FourInARowGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FourInARowGameScene.sks; sourceTree = "<group>"; };
+		E42A0EBB2CD67A0D000B5A2A /* GKETileSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKETileSet.swift; sourceTree = "<group>"; };
+		E42A0EBE2CD73E03000B5A2A /* GKETileLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKETileLayer.swift; sourceTree = "<group>"; };
+		E42A0EC12CD74164000B5A2A /* GKETileNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKETileNode.swift; sourceTree = "<group>"; };
+		E42A0EC52CD74A4F000B5A2A /* GKERandomBag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKERandomBag.swift; sourceTree = "<group>"; };
+		E42A0EC82CD78B12000B5A2A /* GKEMetaTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKEMetaTile.swift; sourceTree = "<group>"; };
+		E42A0ECC2CD8851B000B5A2A /* TicTacToeGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicTacToeGameScene.swift; sourceTree = "<group>"; };
+		E42A0ECF2CD886BE000B5A2A /* TicTacToeGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TicTacToeGameScene.sks; sourceTree = "<group>"; };
+		E44163362CCFE9D90008529C /* TetrisGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TetrisGameScene.swift; sourceTree = "<group>"; };
+		E44163392CCFEA060008529C /* TetrisGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TetrisGameScene.sks; sourceTree = "<group>"; };
+		E441633C2CCFEB950008529C /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		E441633D2CCFEB950008529C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +101,8 @@
 		E4295F062CCE31A800DC64E6 = {
 			isa = PBXGroup;
 			children = (
+				E441633C2CCFEB950008529C /* LICENCE */,
+				E441633D2CCFEB950008529C /* README.md */,
 				E4295F0B2CCE31A800DC64E6 /* GKE Shared */,
 				E4295F162CCE31AB00DC64E6 /* GKE iOS */,
 				E4295F262CCE31AB00DC64E6 /* GKE macOS */,
@@ -78,9 +113,12 @@
 		E4295F0B2CCE31A800DC64E6 /* GKE Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E42A0ECB2CD7C513000B5A2A /* TicTacToe */,
+				E44163352CCFE9C10008529C /* Tetris */,
 				E4295F3F2CCE32C900DC64E6 /* GameScene */,
 				E4295F0F2CCE31AB00DC64E6 /* Assets.xcassets */,
 				E4295F462CCE33E200DC64E6 /* FourInARow */,
+				E42A0EC42CD74326000B5A2A /* GKE */,
 			);
 			path = "GKE Shared";
 			sourceTree = "<group>";
@@ -133,6 +171,36 @@
 				E4295F402CCE334B00DC64E6 /* FourInARowGameScene.swift */,
 			);
 			path = FourInARow;
+			sourceTree = "<group>";
+		};
+		E42A0EC42CD74326000B5A2A /* GKE */ = {
+			isa = PBXGroup;
+			children = (
+				E42A0EC12CD74164000B5A2A /* GKETileNode.swift */,
+				E42A0EC82CD78B12000B5A2A /* GKEMetaTile.swift */,
+				E42A0EBB2CD67A0D000B5A2A /* GKETileSet.swift */,
+				E42A0EBE2CD73E03000B5A2A /* GKETileLayer.swift */,
+				E42A0EC52CD74A4F000B5A2A /* GKERandomBag.swift */,
+			);
+			path = GKE;
+			sourceTree = "<group>";
+		};
+		E42A0ECB2CD7C513000B5A2A /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				E42A0ECF2CD886BE000B5A2A /* TicTacToeGameScene.sks */,
+				E42A0ECC2CD8851B000B5A2A /* TicTacToeGameScene.swift */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		E44163352CCFE9C10008529C /* Tetris */ = {
+			isa = PBXGroup;
+			children = (
+				E44163392CCFEA060008529C /* TetrisGameScene.sks */,
+				E44163362CCFE9D90008529C /* TetrisGameScene.swift */,
+			);
+			path = Tetris;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,11 +283,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4295F312CCE31AB00DC64E6 /* GameScene.sks in Resources */,
+				E441633A2CCFEA060008529C /* TetrisGameScene.sks in Resources */,
+				E441633E2CCFEB950008529C /* LICENCE in Resources */,
 				E4295F1D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
 				E4295F2F2CCE31AB00DC64E6 /* Actions.sks in Resources */,
 				E4295F202CCE31AB00DC64E6 /* LaunchScreen.storyboard in Resources */,
+				E44163402CCFEB950008529C /* README.md in Resources */,
 				E4295F442CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
 				E4295F352CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
+				E42A0ED02CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,10 +300,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4295F2D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
+				E441633F2CCFEB950008529C /* LICENCE in Resources */,
 				E4295F452CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
 				E4295F322CCE31AB00DC64E6 /* GameScene.sks in Resources */,
 				E4295F362CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
+				E42A0ED12CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */,
 				E4295F302CCE31AB00DC64E6 /* Actions.sks in Resources */,
+				E44163412CCFEB950008529C /* README.md in Resources */,
+				E441633B2CCFEA060008529C /* TetrisGameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,10 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42A0EC92CD78B12000B5A2A /* GKEMetaTile.swift in Sources */,
 				E4295F412CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
+				E42A0ECD2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */,
 				E4295F332CCE31AB00DC64E6 /* GameScene.swift in Sources */,
+				E42A0EBF2CD73E03000B5A2A /* GKETileLayer.swift in Sources */,
+				E42A0EBC2CD67A0D000B5A2A /* GKETileSet.swift in Sources */,
 				E4295F1A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
+				E44163372CCFE9D90008529C /* TetrisGameScene.swift in Sources */,
 				E4295F182CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
+				E42A0EC22CD74164000B5A2A /* GKETileNode.swift in Sources */,
+				E42A0EC62CD74A4F000B5A2A /* GKERandomBag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,10 +336,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E42A0ECA2CD78B12000B5A2A /* GKEMetaTile.swift in Sources */,
 				E4295F422CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
+				E42A0ECE2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */,
 				E4295F342CCE31AB00DC64E6 /* GameScene.swift in Sources */,
+				E42A0EC02CD73E03000B5A2A /* GKETileLayer.swift in Sources */,
+				E42A0EBD2CD67A0D000B5A2A /* GKETileSet.swift in Sources */,
 				E4295F2A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
+				E44163382CCFE9D90008529C /* TetrisGameScene.swift in Sources */,
 				E4295F282CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
+				E42A0EC32CD74164000B5A2A /* GKETileNode.swift in Sources */,
+				E42A0EC72CD74A4F000B5A2A /* GKERandomBag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
