@@ -7,7 +7,6 @@
 
 import GameplayKit
 
-
 class GKERandomBag: NSObject {
     var random: GKARC4RandomSource
     var randoms: [Int] = []

@@ -46,5 +46,8 @@ class GKETileSet: NSObject {
             }
             id += 1
         }
+        
+        self.tilewidth = tilewidth
+        self.tileheight = tileheight
     }
 }

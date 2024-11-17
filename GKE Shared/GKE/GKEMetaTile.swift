@@ -29,7 +29,7 @@ class GKEMetaTile: NSObject {
     
     func draw(offset: GKECoord = .zero) {
         for id in 0...tiles.count-1 {
-            tilelayer.update(col: col + tiles[id].dx + offset.col, row: row + tiles[id].dy + offset.row, gid: tiles[id].dg)
+            tilelayer.update(col: col + tiles[id].dx + Int(offset.col), row: row + tiles[id].dy + Int(offset.row), gid: tiles[id].dg)
         }
     }
     

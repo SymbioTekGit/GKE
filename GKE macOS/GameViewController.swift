@@ -14,14 +14,15 @@ class GameViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let scene = TicTacToeGameScene.newGameScene()
-        
+        let scene = BoulderDashGameScene.newGameScene()
+            
         // Present the scene
         let skView = self.view as! SKView
         skView.presentScene(scene)
         
         skView.ignoresSiblingOrder = true
-        
+        skView.showsPhysics = true
+
         skView.showsFPS = true
         skView.showsNodeCount = true
     }

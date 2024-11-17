@@ -25,6 +25,21 @@ class GKETileLayer: NSObject {
         node.name = name
     }
     
+    func reset(datas: [Int], isReversed: Bool = false) {
+        tiles = Array(repeating: Array(repeating: 0, count:cols), count:rows)
+        node.removeAllChildren()
+        var id = 0
+        while id < datas.count {
+            let gid = datas[id]
+            if gid != 0 {
+                let col = id % cols
+                let row = Int(id / cols)
+                set(col: col, row: (isReversed ? rows - row - 1 : row), gid: gid)
+            }
+            id += 1
+        }
+    }
+    
     func addNode(col: Int, row: Int, gid: Int) {
         let tile = GKETileNode(col: col, row: row, gid: gid, tileset: tileset)
         node.addChild(tile)

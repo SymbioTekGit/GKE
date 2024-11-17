@@ -48,6 +48,32 @@
 		E441633F2CCFEB950008529C /* LICENCE in Resources */ = {isa = PBXBuildFile; fileRef = E441633C2CCFEB950008529C /* LICENCE */; };
 		E44163402CCFEB950008529C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E441633D2CCFEB950008529C /* README.md */; };
 		E44163412CCFEB950008529C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E441633D2CCFEB950008529C /* README.md */; };
+		E44A392F2CEA38CF00838F35 /* BoulderDashRunState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A392E2CEA38CF00838F35 /* BoulderDashRunState.swift */; };
+		E44A39302CEA38CF00838F35 /* BoulderDashRunState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A392E2CEA38CF00838F35 /* BoulderDashRunState.swift */; };
+		E44A39322CEA55AD00838F35 /* BoulderDashCave.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A39312CEA55AD00838F35 /* BoulderDashCave.swift */; };
+		E44A39332CEA55AD00838F35 /* BoulderDashCave.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44A39312CEA55AD00838F35 /* BoulderDashCave.swift */; };
+		E451B2C72CDFAAC300C85967 /* ArkanoidGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451B2C62CDFAAC300C85967 /* ArkanoidGameScene.swift */; };
+		E451B2C82CDFAAC300C85967 /* ArkanoidGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451B2C62CDFAAC300C85967 /* ArkanoidGameScene.swift */; };
+		E451B2CA2CDFAC3B00C85967 /* ArkanoidGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E451B2C92CDFAC3B00C85967 /* ArkanoidGameScene.sks */; };
+		E451B2CB2CDFAC3B00C85967 /* ArkanoidGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E451B2C92CDFAC3B00C85967 /* ArkanoidGameScene.sks */; };
+		E451B2CD2CE080F900C85967 /* GKEEntityComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451B2CC2CE080F900C85967 /* GKEEntityComponent.swift */; };
+		E451B2CE2CE080F900C85967 /* GKEEntityComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = E451B2CC2CE080F900C85967 /* GKEEntityComponent.swift */; };
+		E451B2D02CE0B8BB00C85967 /* arkanoid-arcade.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E451B2CF2CE0B8BB00C85967 /* arkanoid-arcade.atlas */; };
+		E451B2D12CE0B8BB00C85967 /* arkanoid-arcade.atlas in Resources */ = {isa = PBXBuildFile; fileRef = E451B2CF2CE0B8BB00C85967 /* arkanoid-arcade.atlas */; };
+		E4C436A92CE879C1005ED71B /* GauntletGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436A82CE879C1005ED71B /* GauntletGameScene.swift */; };
+		E4C436AA2CE879C1005ED71B /* GauntletGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436A82CE879C1005ED71B /* GauntletGameScene.swift */; };
+		E4C436AC2CE879F8005ED71B /* GauntletGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4C436AB2CE879F8005ED71B /* GauntletGameScene.sks */; };
+		E4C436AD2CE879F8005ED71B /* GauntletGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4C436AB2CE879F8005ED71B /* GauntletGameScene.sks */; };
+		E4C436AF2CE8B95C005ED71B /* GKE.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436AE2CE8B95C005ED71B /* GKE.swift */; };
+		E4C436B02CE8B95C005ED71B /* GKE.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436AE2CE8B95C005ED71B /* GKE.swift */; };
+		E4C436B32CE8D99B005ED71B /* BoulderDashGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436B22CE8D99B005ED71B /* BoulderDashGameScene.swift */; };
+		E4C436B42CE8D99B005ED71B /* BoulderDashGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436B22CE8D99B005ED71B /* BoulderDashGameScene.swift */; };
+		E4C436B62CE8D9AF005ED71B /* BoulderDashGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4C436B52CE8D9AF005ED71B /* BoulderDashGameScene.sks */; };
+		E4C436B72CE8D9AF005ED71B /* BoulderDashGameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4C436B52CE8D9AF005ED71B /* BoulderDashGameScene.sks */; };
+		E4C436B92CE9ED1D005ED71B /* BoulderDashInitialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436B82CE9ED1D005ED71B /* BoulderDashInitialState.swift */; };
+		E4C436BA2CE9ED1D005ED71B /* BoulderDashInitialState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436B82CE9ED1D005ED71B /* BoulderDashInitialState.swift */; };
+		E4C436BC2CEA3467005ED71B /* BoulderDashEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436BB2CEA3467005ED71B /* BoulderDashEntity.swift */; };
+		E4C436BD2CEA3467005ED71B /* BoulderDashEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C436BB2CEA3467005ED71B /* BoulderDashEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +104,19 @@
 		E44163392CCFEA060008529C /* TetrisGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = TetrisGameScene.sks; sourceTree = "<group>"; };
 		E441633C2CCFEB950008529C /* LICENCE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
 		E441633D2CCFEB950008529C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E44A392E2CEA38CF00838F35 /* BoulderDashRunState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderDashRunState.swift; sourceTree = "<group>"; };
+		E44A39312CEA55AD00838F35 /* BoulderDashCave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderDashCave.swift; sourceTree = "<group>"; };
+		E451B2C62CDFAAC300C85967 /* ArkanoidGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArkanoidGameScene.swift; sourceTree = "<group>"; };
+		E451B2C92CDFAC3B00C85967 /* ArkanoidGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ArkanoidGameScene.sks; sourceTree = "<group>"; };
+		E451B2CC2CE080F900C85967 /* GKEEntityComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKEEntityComponent.swift; sourceTree = "<group>"; };
+		E451B2CF2CE0B8BB00C85967 /* arkanoid-arcade.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "arkanoid-arcade.atlas"; sourceTree = "<group>"; };
+		E4C436A82CE879C1005ED71B /* GauntletGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GauntletGameScene.swift; sourceTree = "<group>"; };
+		E4C436AB2CE879F8005ED71B /* GauntletGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GauntletGameScene.sks; sourceTree = "<group>"; };
+		E4C436AE2CE8B95C005ED71B /* GKE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GKE.swift; sourceTree = "<group>"; };
+		E4C436B22CE8D99B005ED71B /* BoulderDashGameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderDashGameScene.swift; sourceTree = "<group>"; };
+		E4C436B52CE8D9AF005ED71B /* BoulderDashGameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BoulderDashGameScene.sks; sourceTree = "<group>"; };
+		E4C436B82CE9ED1D005ED71B /* BoulderDashInitialState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderDashInitialState.swift; sourceTree = "<group>"; };
+		E4C436BB2CEA3467005ED71B /* BoulderDashEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoulderDashEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +152,9 @@
 		E4295F0B2CCE31A800DC64E6 /* GKE Shared */ = {
 			isa = PBXGroup;
 			children = (
+				E4C436B12CE8D989005ED71B /* BoulderDash */,
+				E4C436A72CE87789005ED71B /* Gauntlet */,
+				E451B2C52CDFAAAF00C85967 /* Arkanoid */,
 				E42A0ECB2CD7C513000B5A2A /* TicTacToe */,
 				E44163352CCFE9C10008529C /* Tetris */,
 				E4295F3F2CCE32C900DC64E6 /* GameScene */,
@@ -176,11 +218,13 @@
 		E42A0EC42CD74326000B5A2A /* GKE */ = {
 			isa = PBXGroup;
 			children = (
+				E4C436AE2CE8B95C005ED71B /* GKE.swift */,
 				E42A0EC12CD74164000B5A2A /* GKETileNode.swift */,
 				E42A0EC82CD78B12000B5A2A /* GKEMetaTile.swift */,
 				E42A0EBB2CD67A0D000B5A2A /* GKETileSet.swift */,
 				E42A0EBE2CD73E03000B5A2A /* GKETileLayer.swift */,
 				E42A0EC52CD74A4F000B5A2A /* GKERandomBag.swift */,
+				E451B2CC2CE080F900C85967 /* GKEEntityComponent.swift */,
 			);
 			path = GKE;
 			sourceTree = "<group>";
@@ -201,6 +245,38 @@
 				E44163362CCFE9D90008529C /* TetrisGameScene.swift */,
 			);
 			path = Tetris;
+			sourceTree = "<group>";
+		};
+		E451B2C52CDFAAAF00C85967 /* Arkanoid */ = {
+			isa = PBXGroup;
+			children = (
+				E451B2C92CDFAC3B00C85967 /* ArkanoidGameScene.sks */,
+				E451B2C62CDFAAC300C85967 /* ArkanoidGameScene.swift */,
+				E451B2CF2CE0B8BB00C85967 /* arkanoid-arcade.atlas */,
+			);
+			path = Arkanoid;
+			sourceTree = "<group>";
+		};
+		E4C436A72CE87789005ED71B /* Gauntlet */ = {
+			isa = PBXGroup;
+			children = (
+				E4C436AB2CE879F8005ED71B /* GauntletGameScene.sks */,
+				E4C436A82CE879C1005ED71B /* GauntletGameScene.swift */,
+			);
+			path = Gauntlet;
+			sourceTree = "<group>";
+		};
+		E4C436B12CE8D989005ED71B /* BoulderDash */ = {
+			isa = PBXGroup;
+			children = (
+				E4C436B52CE8D9AF005ED71B /* BoulderDashGameScene.sks */,
+				E4C436B22CE8D99B005ED71B /* BoulderDashGameScene.swift */,
+				E4C436B82CE9ED1D005ED71B /* BoulderDashInitialState.swift */,
+				E44A392E2CEA38CF00838F35 /* BoulderDashRunState.swift */,
+				E4C436BB2CEA3467005ED71B /* BoulderDashEntity.swift */,
+				E44A39312CEA55AD00838F35 /* BoulderDashCave.swift */,
+			);
+			path = BoulderDash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,13 +360,17 @@
 			files = (
 				E4295F312CCE31AB00DC64E6 /* GameScene.sks in Resources */,
 				E441633A2CCFEA060008529C /* TetrisGameScene.sks in Resources */,
+				E4C436AC2CE879F8005ED71B /* GauntletGameScene.sks in Resources */,
 				E441633E2CCFEB950008529C /* LICENCE in Resources */,
 				E4295F1D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
 				E4295F2F2CCE31AB00DC64E6 /* Actions.sks in Resources */,
 				E4295F202CCE31AB00DC64E6 /* LaunchScreen.storyboard in Resources */,
 				E44163402CCFEB950008529C /* README.md in Resources */,
+				E451B2CA2CDFAC3B00C85967 /* ArkanoidGameScene.sks in Resources */,
 				E4295F442CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
+				E4C436B62CE8D9AF005ED71B /* BoulderDashGameScene.sks in Resources */,
 				E4295F352CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
+				E451B2D02CE0B8BB00C85967 /* arkanoid-arcade.atlas in Resources */,
 				E42A0ED02CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +379,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C436AD2CE879F8005ED71B /* GauntletGameScene.sks in Resources */,
+				E4C436B72CE8D9AF005ED71B /* BoulderDashGameScene.sks in Resources */,
 				E4295F2D2CCE31AB00DC64E6 /* Main.storyboard in Resources */,
 				E441633F2CCFEB950008529C /* LICENCE in Resources */,
 				E4295F452CCE33D900DC64E6 /* FourInARowGameScene.sks in Resources */,
@@ -306,8 +388,10 @@
 				E4295F362CCE31AB00DC64E6 /* Assets.xcassets in Resources */,
 				E42A0ED12CD886BE000B5A2A /* TicTacToeGameScene.sks in Resources */,
 				E4295F302CCE31AB00DC64E6 /* Actions.sks in Resources */,
+				E451B2D12CE0B8BB00C85967 /* arkanoid-arcade.atlas in Resources */,
 				E44163412CCFEB950008529C /* README.md in Resources */,
 				E441633B2CCFEA060008529C /* TetrisGameScene.sks in Resources */,
+				E451B2CB2CDFAC3B00C85967 /* ArkanoidGameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +402,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C436BC2CEA3467005ED71B /* BoulderDashEntity.swift in Sources */,
+				E4C436AF2CE8B95C005ED71B /* GKE.swift in Sources */,
 				E42A0EC92CD78B12000B5A2A /* GKEMetaTile.swift in Sources */,
+				E451B2CD2CE080F900C85967 /* GKEEntityComponent.swift in Sources */,
 				E4295F412CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
 				E42A0ECD2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */,
 				E4295F332CCE31AB00DC64E6 /* GameScene.swift in Sources */,
@@ -326,9 +413,15 @@
 				E42A0EBC2CD67A0D000B5A2A /* GKETileSet.swift in Sources */,
 				E4295F1A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
 				E44163372CCFE9D90008529C /* TetrisGameScene.swift in Sources */,
+				E44A392F2CEA38CF00838F35 /* BoulderDashRunState.swift in Sources */,
+				E44A39322CEA55AD00838F35 /* BoulderDashCave.swift in Sources */,
+				E4C436B32CE8D99B005ED71B /* BoulderDashGameScene.swift in Sources */,
 				E4295F182CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
 				E42A0EC22CD74164000B5A2A /* GKETileNode.swift in Sources */,
 				E42A0EC62CD74A4F000B5A2A /* GKERandomBag.swift in Sources */,
+				E4C436A92CE879C1005ED71B /* GauntletGameScene.swift in Sources */,
+				E451B2C72CDFAAC300C85967 /* ArkanoidGameScene.swift in Sources */,
+				E4C436B92CE9ED1D005ED71B /* BoulderDashInitialState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +429,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4C436BD2CEA3467005ED71B /* BoulderDashEntity.swift in Sources */,
+				E4C436B02CE8B95C005ED71B /* GKE.swift in Sources */,
 				E42A0ECA2CD78B12000B5A2A /* GKEMetaTile.swift in Sources */,
+				E451B2CE2CE080F900C85967 /* GKEEntityComponent.swift in Sources */,
 				E4295F422CCE334B00DC64E6 /* FourInARowGameScene.swift in Sources */,
 				E42A0ECE2CD8851B000B5A2A /* TicTacToeGameScene.swift in Sources */,
 				E4295F342CCE31AB00DC64E6 /* GameScene.swift in Sources */,
@@ -344,9 +440,15 @@
 				E42A0EBD2CD67A0D000B5A2A /* GKETileSet.swift in Sources */,
 				E4295F2A2CCE31AB00DC64E6 /* GameViewController.swift in Sources */,
 				E44163382CCFE9D90008529C /* TetrisGameScene.swift in Sources */,
+				E44A39302CEA38CF00838F35 /* BoulderDashRunState.swift in Sources */,
+				E44A39332CEA55AD00838F35 /* BoulderDashCave.swift in Sources */,
+				E4C436B42CE8D99B005ED71B /* BoulderDashGameScene.swift in Sources */,
 				E4295F282CCE31AB00DC64E6 /* AppDelegate.swift in Sources */,
 				E42A0EC32CD74164000B5A2A /* GKETileNode.swift in Sources */,
 				E42A0EC72CD74A4F000B5A2A /* GKERandomBag.swift in Sources */,
+				E4C436AA2CE879C1005ED71B /* GauntletGameScene.swift in Sources */,
+				E451B2C82CDFAAC300C85967 /* ArkanoidGameScene.swift in Sources */,
+				E4C436BA2CE9ED1D005ED71B /* BoulderDashInitialState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

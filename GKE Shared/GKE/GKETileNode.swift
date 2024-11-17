@@ -7,13 +7,6 @@
 
 import GameplayKit
 
-struct GKECoord {
-    var col: Int
-    var row: Int
-    
-    static let zero = GKECoord(col: 0, row: 0)
-}
-
 class GKETileNode: SKSpriteNode {
     var col: Int = 0
     var row: Int = 0
